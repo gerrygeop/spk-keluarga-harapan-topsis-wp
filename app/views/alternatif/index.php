@@ -1,3 +1,7 @@
+<?php if (!isset($_SESSION['user_id'])) {
+    header('Location: '. BASEURL .'/middleware');
+} ?>
+
 <div class="container-fluid">
     <div class="shadow px-2 py-3 rounded border">
 

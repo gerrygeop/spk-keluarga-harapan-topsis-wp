@@ -13,9 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
 
     <style>
-        body{
-            /* font-family: 'Nunito', sans-serif; */
-        }
         .navbar-brand{
             font-family: 'Kaushan Script', cursive;
         }

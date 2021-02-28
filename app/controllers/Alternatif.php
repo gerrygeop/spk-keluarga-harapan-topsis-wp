@@ -39,11 +39,6 @@ class Alternatif extends Controller {
         }
     }
 
-    public function detail($id)
-    {
-        //
-    }
-
     public function edit($id)
     {
         $data['judul'] = 'Edit Alternatif';
