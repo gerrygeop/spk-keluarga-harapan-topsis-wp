@@ -1,10 +1,10 @@
 <div class="container-fluid">
-    <div class="shadow px-4 py-3 rounded border">
+    <div class="shadow px-4 py-3 rounded border mb-5">
         <h3 class="text-secondary">
             <?= '#' . $data['judul'] ?>
         </h3>
 
-        <div class="p-2 border border-1 rounded table-responsive">
+        <div class="p-2 border border-1 rounded table-responsive mb-3">
 
             <table class="table table-hover">
                 <thead class="table-light">
@@ -113,6 +113,8 @@
 
             </table>
         </div>
+
+        <a href="<?=BASEURL;?>/perbandingan" class="btn btn-warning">Perhitungan</a>
 
     </div>
 </div>
