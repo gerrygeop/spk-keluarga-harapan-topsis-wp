@@ -12,7 +12,8 @@
         </div>
 
         <div class="px-3">
-            <h3 class="text-secondary">#<?= $data['judul']; ?></h3>
+            <h3 class="text-secondary"><?= $data['judul']; ?></h3>
+            
             <a href="<?= BASEURL; ?>/alternatif/create" class="btn btn-primary my-3">
                 <i class="bi bi-plus-square"></i>
                 Tambah Alternatif

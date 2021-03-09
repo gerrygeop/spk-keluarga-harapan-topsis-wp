@@ -2,7 +2,7 @@
     <div class="my-5 py-4 px-3 rounded border shadow">
         <h1 class="mb-3">Keterangan</h1>
         <hr>
-        <div class="row row-cols-1 row-cols-md-4">
+        <div class="row row-cols-1 row-cols-md-3">
 
             <div class="col mb-5">
                 <div class="card">
@@ -10,10 +10,7 @@
                         <span class="badge bg-warning">C1</span> Ibu Hamil
                     </div>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">
-                            Ada
-                            <span class="badge bg-primary rounded-pill">0.5</span>
-                        </li>
+                        <li class="list-group-item">Ada</li>
                         <li class="list-group-item">Tidak Ada</li>
                     </ul>
                 </div>

@@ -1,3 +1,7 @@
+<?php if (isset($_SESSION['user_id'])) {
+    header('Location: '. BASEURL .'/middleware/checkout');
+} ?>
+
 <div class="container">
     <div class="row">
         <div class="col-sm col-lg-5 mx-auto shadow border rounded mt-5 p-5">

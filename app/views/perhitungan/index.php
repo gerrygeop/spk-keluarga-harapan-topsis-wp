@@ -4,16 +4,16 @@
             Hasil Rekomendasi
         </h3>
 
-        <!-- Start Perbandingan -->
+        <!-- Start perhitungan -->
         <div class="d-flex flex-column-reverse">
 
-            <div class="mb-3">
+            <div class="mb-5">
                 <h4 class="text-secondary">Ranking metode TOPSIS </h4>
-                <div class="row justify-content-between px-3">
+
+                <div class="row px-2">
 
                     <div class="col-sm col-lg-5 py-2 px-4 my-3 shadow border rounded">
                         <table class="table">
-                            <!-- <caption>Ranking Metode TOPSIS</caption> -->
                             <thead>
                                 <tr>
                                     <th scope="col">Alt</th>
@@ -24,7 +24,7 @@
                             </thead>
                             <tbody>
                                 <?php 
-                                    arsort($data['tp']['rankTp']);
+                                    // arsort($data['tp']['rankTp']);
                                     $jumlah = count($data['tp']['rankTp']);
                                     $lolos = 50 * $jumlah / 100;
                                     
@@ -54,8 +54,7 @@
                                                 $i++;
                                             } else {
                                                 echo '<span class="badge bg-danger">Tidak diterima</span>';
-                                            }
-                                            ?>
+                                            } ?>
                                         </td>
                                     </tr>
                                 <?php } ?>
@@ -64,34 +63,14 @@
                     </div>
                     
                     <!-- Metode WP -->
-                    <div class="col-sm col-lg-5 py-2 px-4 my-3 shadow border rounded visually-hidden">
-                        <table class="table">
-                            <caption>Ranking Metode WP</caption>
-                            <thead>
-                                <tr>
-                                    <th scope="col">Alt</th>
-                                    <th scope="col">WP</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php 
-                                    arsort($data['wp']['rankWp']);
-                                    foreach($data['wp']['rankWp'] as $key => $value) { 
-                                ?>
-                                    <tr>
-                                        <th>
-                                            <?= 'A'.$key; ?>
-                                        </th>
-                                        <td>
-                                            <?php
-                                                $wp[] = substr($value, 0, 6);
-                                                echo substr($value, 0, 6);
-                                            ?>
-                                        </td>
-                                    </tr>
-                                <?php } ?>
-                            </tbody>
-                        </table>
+                    <div class="col-4 visually-hidden">
+                        <ul>
+                            <?php foreach($data['wp']['rankWp'] as $value) { ?>
+                                <li>
+                                    <?php $wp[] = substr($value, 0, 6); ?>
+                                </li>
+                            <?php } ?>
+                        </ul>
                     </div>
 
                 </div>
@@ -99,7 +78,8 @@
 
             <div class="mb-5">
                 <h4 class="text-secondary">Tingkat kesesuaisan nilai standard error</h4>
-                <div class="row justify-content-center px-3">
+                <div class="row justify-content-center px-2">
+
                     <div class="col py-2 px-4 my-3 shadow border border-1 rounded table-responsive">
                         <?php
                             // TOPSIS
@@ -142,14 +122,15 @@
                             </tbody>
                         </table>
                     </div>
+
                 </div>
             </div>
             
-        </div> <!-- End Perbandingan -->
+        </div>
 
         <div>
-            <a href="<?=BASEURL;?>/perbandingan/topsis" class="btn btn-warning">Detail TOPSIS</a>
-            <a href="<?=BASEURL;?>/perbandingan/wp" class="btn btn-warning">Detail WP</a>
+            <a href="<?=BASEURL;?>/perhitungan/topsis" class="btn btn-warning">Detail TOPSIS</a>
+            <a href="<?=BASEURL;?>/perhitungan/wp" class="btn btn-warning">Detail WP</a>
         </div>
 
     </div>

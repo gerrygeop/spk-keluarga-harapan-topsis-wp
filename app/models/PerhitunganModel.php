@@ -1,6 +1,6 @@
 <?php
 
-class PerbandinganModel extends Controller{
+class PerhitunganModel extends Controller{
 
 
     public function hitungTP($dataTp)
@@ -367,6 +367,7 @@ class PerbandinganModel extends Controller{
 
         $data['X'] = $R;
         $data['V'] = $V;
+        arsort($rank);
         $data['rankTp'] = $rank;
 
         return $data;

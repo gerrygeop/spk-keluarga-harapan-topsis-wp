@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="shadow px-4 py-3 rounded border mb-5">
         <h3 class="text-secondary">
-            <?= '#' . $data['judul'] ?>
+            <?= $data['judul'] ?>
         </h3>
 
         <div class="p-2 border border-1 rounded table-responsive mb-3">
@@ -114,7 +114,7 @@
             </table>
         </div>
 
-        <a href="<?=BASEURL;?>/perbandingan" class="btn btn-warning">Hasil Perhitungan</a>
+        <a href="<?=BASEURL;?>/perhitungan" class="btn btn-warning">Hasil Perhitungan</a>
 
     </div>
 </div>
