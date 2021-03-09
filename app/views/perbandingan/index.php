@@ -19,16 +19,21 @@
                                     <th scope="col">Alt</th>
                                     <th scope="col">Nama</th>
                                     <th scope="col">TOPSIS</th>
+                                    <th scope="col">Keterangan</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php 
                                     arsort($data['tp']['rankTp']);
+                                    $jumlah = count($data['tp']['rankTp']);
+                                    $lolos = 50 * $jumlah / 100;
+                                    
+                                    $i=1;
                                     foreach($data['tp']['rankTp'] as $key => $value) { 
                                 ?>
                                     <tr>
                                         <th>
-                                        <?= 'A'.$key; ?>
+                                            <?= 'A'.$key; ?>
                                         </th>
                                         <td>
                                             <?php foreach ($data['alt'] as $alt) {
@@ -41,6 +46,15 @@
                                             <?php
                                                 $tp[] = substr($value, 0, 6);
                                                 echo substr($value, 0, 6);
+                                            ?>
+                                        </td>
+                                        <td>
+                                            <?php if($i <= $lolos) {
+                                                echo '<span class="badge bg-success">Diterima</span>';
+                                                $i++;
+                                            } else {
+                                                echo '<span class="badge bg-danger">Tidak diterima</span>';
+                                            }
                                             ?>
                                         </td>
                                     </tr>

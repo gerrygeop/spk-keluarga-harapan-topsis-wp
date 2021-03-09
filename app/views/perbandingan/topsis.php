@@ -151,10 +151,10 @@
                                 <?= 'A' . $i; ?>
                             </th>
                             <td>
-                                <?= substr($data['tp']['DP'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['DP'.$i], 0, 7); ?>
                             </td>
                             <td>
-                                <?= substr($data['tp']['DM'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['DM'.$i], 0, 7); ?>
                             </td>
                         </tr>
                     <?php } ?>

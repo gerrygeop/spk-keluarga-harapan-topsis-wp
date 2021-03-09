@@ -12,6 +12,12 @@ class KriteriaModel {
         $this->db = new Database;
     }
 
+    public function getAllKriteria()
+    {
+        $this->db->query('SELECT nama_ktr FROM '. $this->tbl_kriteria);
+        return $this->db->resultSet();
+    }
+
     public function getIdKriteria()
     {
         $this->db->query('SELECT nilai_bk FROM '. $this->tbl_kriteria);

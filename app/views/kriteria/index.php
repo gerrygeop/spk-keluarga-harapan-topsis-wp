@@ -114,7 +114,7 @@
             </table>
         </div>
 
-        <a href="<?=BASEURL;?>/perbandingan" class="btn btn-warning">Perhitungan</a>
+        <a href="<?=BASEURL;?>/perbandingan" class="btn btn-warning">Hasil Perhitungan</a>
 
     </div>
 </div>

@@ -37,10 +37,14 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav w-100">
                     <a class="nav-link" href="<?= BASEURL; ?>/home">Home</a>
+
                     <?php if (isset($_SESSION['user_id'])) : ?>
                         <a class="nav-link" href="<?= BASEURL; ?>/alternatif">Alternatif</a>
                     <?php endif; ?>
+
                     <a class="nav-link" href="<?= BASEURL; ?>/kriteria">Kriteria</a>
+                    <a class="nav-link" href="<?= BASEURL; ?>/home/about">Tentang</a>
+                    
                     <!-- <a class="nav-link" href="<?= BASEURL; ?>/perbandingan">Perbandingan</a> -->
                     <?php if (isset($_SESSION['user_id'])) : ?>
                         <a class="nav-link btn btn-outline-info btn-sm text-uppercase px-3 ms-auto" href="<?= BASEURL; ?>/auth/logout">Logout</a>
