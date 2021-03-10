@@ -1,4 +1,15 @@
+<?php
+    $jumlahAlt = count($data['tp']['rankTp']);
+?>
+
 <div class="container-fluid">
+
+    <nav aria-label="breadcrumb" class="ms-3">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="<?=BASEURL;?>/perhitungan">Perhitungan</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Detail Topsis</li>
+        </ol>
+    </nav>
 
     <div class="shadow px-4 py-3 rounded border mb-5">
         <h4 class="text-secondary">
@@ -18,7 +29,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php for($i = 1; $i <= 10; $i++) { ?>
+                    <?php for($i = 1; $i <= $jumlahAlt; $i++) { ?>
                         <tr class="text-center">
                             <th scope="row">
                                 <?= 'A' . $i; ?>
@@ -83,7 +94,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php for($i = 1; $i <= 10; $i++) { ?>
+                    <?php for($i = 1; $i <= $jumlahAlt; $i++) { ?>
                         <tr class="text-center">
                             <th scope="row">
                                 <?= 'A' . $i; ?>
@@ -145,7 +156,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php for ($i=1; $i <=10; $i++) { ?>
+                    <?php for ($i=1; $i <= $jumlahAlt; $i++) { ?>
                         <tr class="text-center">
                             <th>
                                 <?= 'A' . $i; ?>
@@ -181,7 +192,6 @@
                 </thead>
                 <tbody>
                     <?php 
-                        arsort($data['tp']['rankTp']);
                         foreach($data['tp']['rankTp'] as $key => $value) { 
                     ?>
                         <tr>
@@ -205,4 +215,4 @@
         </div>
     </div>
 
-</div> 
+</div>

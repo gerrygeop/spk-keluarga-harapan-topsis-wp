@@ -1,4 +1,15 @@
+<?php
+    $jumlahAlt = count($data['wp']['rankWp']);
+?>
+
 <div class="container-fluid">
+
+    <nav aria-label="breadcrumb" class="ms-3">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="<?=BASEURL;?>/perhitungan">Perhitungan</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Detail WP</li>
+        </ol>
+    </nav>
 
     <div class="shadow px-4 py-3 rounded border mb-5">
         <h4 class="text-secondary">
