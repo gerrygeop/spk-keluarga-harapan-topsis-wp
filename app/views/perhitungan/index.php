@@ -23,8 +23,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php 
-                                    // arsort($data['tp']['rankTp']);
+                                <?php
                                     $jumlah = count($data['tp']['rankTp']);
                                     $lolos = 50 * $jumlah / 100;
                                     

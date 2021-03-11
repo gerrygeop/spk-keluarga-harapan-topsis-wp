@@ -112,7 +112,7 @@
                 </thead>
                 <tbody>
                     <?php 
-                        arsort($data['wp']['rankWp']);
+                        // arsort($data['wp']['rankWp']);
                         foreach($data['wp']['rankWp'] as $key => $value) { 
                     ?>
                         <tr>
