@@ -34,7 +34,8 @@ class Perhitungan extends Controller {
     public function wp()
     {
         $data['alt'] = $bobot['alt'] = $this->model('AlternatifModel')->getAllAlternatif();
-        $bobot['sub'] = $this->model('KriteriaModel')->getSubKriteria();
+        $bobot['sub'] = $this->model('KriteriaModel')->getBobotSub();
+
         $bobot['nilai'] = $this->model('KriteriaModel')->getIdKriteria();
 
         $data['wp'] = $this->model('PerhitunganModel')->hitungWP($bobot);

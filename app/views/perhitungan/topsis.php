@@ -35,37 +35,37 @@
                                 <?= 'A' . $i; ?>
                             </th>
                             <td class="py-2 px-3">
-                                <?= substr($data['tp']['X']['R1'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['X']['R1-'.$i], 0, 6); ?>
                             </td>
                             <td class="py-2 px-3">
-                                <?= substr($data['tp']['X']['R2'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['X']['R2-'.$i], 0, 6); ?>
                             </td>
                             <td class="py-2 px-3">
-                                <?= substr($data['tp']['X']['R3'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['X']['R3-'.$i], 0, 6); ?>
                             </td>
                             <td class="py-2 px-3">
-                                <?= substr($data['tp']['X']['R4'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['X']['R4-'.$i], 0, 6); ?>
                             </td>
                             <td class="py-2 px-3">
-                                <?= substr($data['tp']['X']['R5'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['X']['R5-'.$i], 0, 6); ?>
                             </td>
                             <td class="py-2 px-3">
-                                <?= substr($data['tp']['X']['R6'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['X']['R6-'.$i], 0, 6); ?>
                             </td>
                             <td class="py-2 px-3">
-                                <?= substr($data['tp']['X']['R7'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['X']['R7-'.$i], 0, 6); ?>
                             </td>
                             <td class="py-2 px-3">
-                                <?= substr($data['tp']['X']['R8'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['X']['R8-'.$i], 0, 6); ?>
                             </td>
                             <td class="py-2 px-3">
-                                <?= substr($data['tp']['X']['R9'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['X']['R9-'.$i], 0, 6); ?>
                             </td>
                             <td class="py-2 px-3">
-                                <?= substr($data['tp']['X']['R10'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['X']['R10-'.$i], 0, 6); ?>
                             </td>
                             <td class="py-2 px-3">
-                                <?= substr($data['tp']['X']['R11'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['X']['R11-'.$i], 0, 6); ?>
                             </td>
                         </tr>
                     <?php } ?>
@@ -100,37 +100,37 @@
                                 <?= 'A' . $i; ?>
                             </th>
                             <td class="py-2 px-3">
-                                <?= substr($data['tp']['V']['V1'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['V']['V1-'.$i], 0, 6); ?>
                             </td>
                             <td class="py-2 px-3">
-                                <?= substr($data['tp']['V']['V2'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['V']['V2-'.$i], 0, 6); ?>
                             </td>
                             <td class="py-2 px-3">
-                                <?= substr($data['tp']['V']['V3'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['V']['V3-'.$i], 0, 6); ?>
                             </td>
                             <td class="py-2 px-3">
-                                <?= substr($data['tp']['V']['V4'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['V']['V4-'.$i], 0, 6); ?>
                             </td>
                             <td class="py-2 px-3">
-                                <?= substr($data['tp']['V']['V5'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['V']['V5-'.$i], 0, 6); ?>
                             </td>
                             <td class="py-2 px-3">
-                                <?= substr($data['tp']['V']['V6'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['V']['V6-'.$i], 0, 6); ?>
                             </td>
                             <td class="py-2 px-3">
-                                <?= substr($data['tp']['V']['V7'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['V']['V7-'.$i], 0, 6); ?>
                             </td>
                             <td class="py-2 px-3">
-                                <?= substr($data['tp']['V']['V8'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['V']['V8-'.$i], 0, 6); ?>
                             </td>
                             <td class="py-2 px-3">
-                                <?= substr($data['tp']['V']['V9'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['V']['V9-'.$i], 0, 6); ?>
                             </td>
                             <td class="py-2 px-3">
-                                <?= substr($data['tp']['V']['V10'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['V']['V10-'.$i], 0, 6); ?>
                             </td>
                             <td class="py-2 px-3">
-                                <?= substr($data['tp']['V']['V11'.$i], 0, 6); ?>
+                                <?= substr($data['tp']['V']['V11-'.$i], 0, 6); ?>
                             </td>
                         </tr>
                     <?php } ?>

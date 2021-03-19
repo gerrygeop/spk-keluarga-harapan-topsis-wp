@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Waktu pembuatan: 26 Feb 2021 pada 11.34
--- Versi server: 5.7.24
--- Versi PHP: 7.4.7
+-- Generation Time: Mar 17, 2021 at 01:24 PM
+-- Server version: 5.7.24
+-- PHP Version: 7.2.19
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `admin`
+-- Table structure for table `admin`
 --
 
 CREATE TABLE `admin` (
@@ -34,7 +34,7 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `admin`
+-- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`) VALUES
@@ -44,7 +44,7 @@ INSERT INTO `admin` (`id`, `username`, `password`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `alternatif`
+-- Table structure for table `alternatif`
 --
 
 CREATE TABLE `alternatif` (
@@ -64,7 +64,7 @@ CREATE TABLE `alternatif` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `alternatif`
+-- Dumping data for table `alternatif`
 --
 
 INSERT INTO `alternatif` (`id_alt`, `nama`, `c1`, `c2`, `c3`, `c4`, `c5`, `c6`, `c7`, `c8`, `c9`, `c10`, `c11`) VALUES
@@ -77,12 +77,52 @@ INSERT INTO `alternatif` (`id_alt`, `nama`, `c1`, `c2`, `c3`, `c4`, `c5`, `c6`, 
 (7, 'Samsiah', 1, 2, 6, 2, 2, 1, 10, 14, 17, 21, 24),
 (8, 'Warida', 1, 2, 4, 1, 2, 2, 10, 15, 18, 21, 25),
 (9, 'Sukarno', 2, 2, 3, 1, 2, 1, 8, 12, 17, 21, 25),
-(10, 'Rusdaniar', 2, 1, 3, 2, 1, 2, 9, 13, 18, 21, 26);
+(10, 'Rusdaniar', 2, 1, 3, 2, 1, 2, 9, 13, 18, 21, 26),
+(11, 'Supran', 2, 2, 3, 1, 2, 2, 10, 11, 17, 19, 27),
+(12, 'Ajan Laing', 2, 1, 3, 2, 2, 1, 10, 11, 16, 20, 24),
+(13, 'Hamsia', 2, 1, 3, 2, 1, 2, 10, 14, 17, 20, 24),
+(14, 'La Muhu', 2, 1, 4, 2, 1, 2, 7, 12, 18, 21, 25),
+(15, 'Badariah', 2, 2, 3, 1, 2, 1, 10, 14, 18, 20, 26),
+(16, 'Sarintan', 1, 1, 6, 2, 2, 1, 10, 14, 17, 20, 25),
+(17, 'Ahmad', 2, 2, 3, 2, 2, 1, 7, 15, 17, 20, 25),
+(18, 'Zulifah', 1, 1, 6, 1, 2, 2, 10, 15, 18, 21, 27),
+(19, 'Yana Pur', 1, 2, 6, 2, 2, 1, 10, 14, 18, 20, 27),
+(20, 'Rohmah', 1, 2, 6, 1, 2, 2, 10, 14, 18, 21, 25),
+(21, 'Hatimah', 2, 1, 3, 1, 1, 2, 9, 14, 17, 20, 25),
+(22, 'Mastora', 2, 1, 3, 2, 1, 2, 10, 11, 16, 20, 24),
+(23, 'Darkasi', 2, 1, 5, 2, 1, 1, 10, 11, 16, 21, 24),
+(24, 'Makmur', 2, 2, 5, 2, 1, 1, 10, 14, 17, 19, 27),
+(25, 'Masitah', 1, 2, 6, 2, 1, 1, 10, 14, 16, 20, 25),
+(26, 'Ngatmiya', 1, 2, 6, 1, 2, 2, 10, 13, 17, 22, 25),
+(27, 'Noryana', 1, 2, 6, 1, 2, 2, 10, 12, 17, 20, 24),
+(28, 'Jati', 2, 1, 3, 1, 2, 1, 10, 15, 18, 19, 27),
+(29, 'Rusita', 2, 2, 6, 2, 1, 1, 7, 12, 16, 20, 25),
+(30, 'Ruhaidah', 1, 2, 6, 2, 1, 2, 10, 14, 18, 20, 27),
+(31, 'Lestari', 1, 2, 6, 2, 1, 2, 10, 14, 17, 20, 24),
+(32, 'Siti', 2, 2, 6, 2, 2, 1, 10, 12, 17, 21, 25),
+(33, 'Siti Zuba', 2, 1, 6, 1, 2, 2, 8, 12, 17, 21, 24),
+(34, 'Dwi Sri U', 1, 2, 6, 1, 2, 2, 8, 12, 18, 21, 26),
+(35, 'Sukirah', 2, 2, 6, 1, 2, 1, 10, 13, 17, 19, 27),
+(36, 'Fitria', 2, 2, 6, 2, 2, 1, 10, 11, 17, 20, 24),
+(37, 'Ita', 1, 2, 6, 2, 1, 2, 9, 14, 17, 20, 25),
+(38, 'Diana', 1, 1, 6, 1, 2, 2, 10, 12, 18, 22, 25),
+(39, 'Muhamad', 2, 1, 6, 1, 2, 1, 10, 14, 18, 20, 26),
+(40, 'Karsi', 1, 1, 6, 1, 2, 2, 10, 11, 17, 20, 24),
+(41, 'Asnah', 1, 2, 6, 2, 2, 1, 7, 12, 17, 20, 27),
+(42, 'Djamila', 2, 2, 4, 1, 2, 2, 10, 13, 17, 21, 27),
+(43, 'Warsi', 1, 1, 6, 2, 1, 1, 10, 14, 18, 20, 25),
+(44, 'Astutik', 1, 2, 6, 1, 2, 2, 10, 14, 18, 21, 25),
+(45, 'Waisandi', 2, 2, 4, 1, 1, 2, 9, 14, 17, 20, 24),
+(46, 'Siti Zul', 1, 1, 6, 2, 2, 2, 10, 12, 16, 20, 24),
+(47, 'Sapardi', 2, 2, 3, 1, 2, 1, 10, 11, 16, 21, 24),
+(48, 'Napsiah', 2, 2, 6, 1, 1, 1, 10, 14, 17, 19, 27),
+(49, 'Norlenah', 1, 1, 6, 1, 1, 2, 9, 15, 17, 20, 25),
+(50, 'Rasli Mafe', 2, 1, 3, 2, 2, 1, 10, 14, 16, 20, 24);
 
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `kriteria`
+-- Table structure for table `kriteria`
 --
 
 CREATE TABLE `kriteria` (
@@ -92,7 +132,7 @@ CREATE TABLE `kriteria` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `kriteria`
+-- Dumping data for table `kriteria`
 --
 
 INSERT INTO `kriteria` (`id_ktr`, `nama_ktr`, `nilai_bk`) VALUES
@@ -111,7 +151,7 @@ INSERT INTO `kriteria` (`id_ktr`, `nama_ktr`, `nilai_bk`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `pivot_ktr_sub`
+-- Table structure for table `pivot_ktr_sub`
 --
 
 CREATE TABLE `pivot_ktr_sub` (
@@ -120,7 +160,7 @@ CREATE TABLE `pivot_ktr_sub` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `pivot_ktr_sub`
+-- Dumping data for table `pivot_ktr_sub`
 --
 
 INSERT INTO `pivot_ktr_sub` (`id_ktr`, `id_sub`) VALUES
@@ -163,7 +203,7 @@ INSERT INTO `pivot_ktr_sub` (`id_ktr`, `id_sub`) VALUES
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `subkriteria`
+-- Table structure for table `subkriteria`
 --
 
 CREATE TABLE `subkriteria` (
@@ -173,7 +213,7 @@ CREATE TABLE `subkriteria` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
--- Dumping data untuk tabel `subkriteria`
+-- Dumping data for table `subkriteria`
 --
 
 INSERT INTO `subkriteria` (`id_sub`, `nama_sub`, `bobot_sub`) VALUES
@@ -210,70 +250,70 @@ INSERT INTO `subkriteria` (`id_sub`, `nama_sub`, `bobot_sub`) VALUES
 --
 
 --
--- Indeks untuk tabel `admin`
+-- Indexes for table `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeks untuk tabel `alternatif`
+-- Indexes for table `alternatif`
 --
 ALTER TABLE `alternatif`
   ADD PRIMARY KEY (`id_alt`);
 
 --
--- Indeks untuk tabel `kriteria`
+-- Indexes for table `kriteria`
 --
 ALTER TABLE `kriteria`
   ADD PRIMARY KEY (`id_ktr`);
 
 --
--- Indeks untuk tabel `pivot_ktr_sub`
+-- Indexes for table `pivot_ktr_sub`
 --
 ALTER TABLE `pivot_ktr_sub`
   ADD KEY `id_ktr` (`id_ktr`),
   ADD KEY `id_sub` (`id_sub`);
 
 --
--- Indeks untuk tabel `subkriteria`
+-- Indexes for table `subkriteria`
 --
 ALTER TABLE `subkriteria`
   ADD PRIMARY KEY (`id_sub`);
 
 --
--- AUTO_INCREMENT untuk tabel yang dibuang
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT untuk tabel `admin`
+-- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
--- AUTO_INCREMENT untuk tabel `alternatif`
+-- AUTO_INCREMENT for table `alternatif`
 --
 ALTER TABLE `alternatif`
-  MODIFY `id_alt` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_alt` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
--- AUTO_INCREMENT untuk tabel `kriteria`
+-- AUTO_INCREMENT for table `kriteria`
 --
 ALTER TABLE `kriteria`
   MODIFY `id_ktr` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
--- AUTO_INCREMENT untuk tabel `subkriteria`
+-- AUTO_INCREMENT for table `subkriteria`
 --
 ALTER TABLE `subkriteria`
   MODIFY `id_sub` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
+-- Constraints for dumped tables
 --
 
 --
--- Ketidakleluasaan untuk tabel `pivot_ktr_sub`
+-- Constraints for table `pivot_ktr_sub`
 --
 ALTER TABLE `pivot_ktr_sub`
   ADD CONSTRAINT `pivot_ktr_sub_ibfk_1` FOREIGN KEY (`id_ktr`) REFERENCES `kriteria` (`id_ktr`) ON DELETE CASCADE ON UPDATE CASCADE,

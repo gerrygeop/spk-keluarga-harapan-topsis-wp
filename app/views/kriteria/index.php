@@ -1,9 +1,15 @@
 <div class="container-fluid">
-    <div class="shadow px-4 py-3 rounded border mb-5">
-        <h3 class="text-secondary">
-            <?= $data['judul'] ?>
-        </h3>
+    <div class="shadow p-4 rounded border mb-5">
 
+    <div class="row justify-content-between">
+        <div class="col">
+            <h3 class="text-secondary mb-4"><?= $data['judul'] ?></h3>
+        </div>
+        <div class="col text-end">
+            <a href="<?=BASEURL;?>/perhitungan" class="btn btn-warning px-3 py-2">Hasil Perhitungan</a>
+        </div>
+    </div>
+        
         <div class="p-2 border border-1 rounded table-responsive mb-3">
 
             <table class="table table-hover">
@@ -22,17 +28,17 @@
                 <tbody>
                     <?php foreach ($data['alt'] as $alt) : ?>
                         <tr>
-                            <td scope="row">
+                            <th scope="row">
                             <!--FOR LOOP NOMOR ALT DARI 1 ... SETERUSNYA 
                                 GAK HARUS PAKE ID, BISA PAKE ANGKA BIASA KARNA GAK ADA PAGINATION-->
                                <?= 'A' . $alt['id_alt']; ?>
-                            </td>
+                            </th>
                             <td scope="row">
                                 <?= $alt['nama']; ?>
                             </td>
                             <td scope="row">
                                 <?php foreach ($data['sub'] as $sub) {  // For Loop data yang diambil dari tabel SubKriteria
-                                    if ($alt['c1'] == $sub['id_sub']) { // Lalu cek apakah ID SubKriteria sama dgn ID kolom C1 di table ALTERNATIF
+                                    if ($alt['c1'] == $sub['id_sub']) { // Cek apakah ID SubKriteria sama dgn ID kolom C1 di table ALTERNATIF
                                         echo $sub['bobot_sub'];         // Tampilkan nilai bobot nya! Semua yang dibawah juga sama !
                                     }
                                 } ?>
@@ -113,8 +119,6 @@
 
             </table>
         </div>
-
-        <a href="<?=BASEURL;?>/perhitungan" class="btn btn-warning">Hasil Perhitungan</a>
 
     </div>
 </div>

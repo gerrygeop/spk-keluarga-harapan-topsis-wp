@@ -86,7 +86,7 @@
                     <?php $i=1; foreach ($data['wp']['V'] as $v) { ?>
                         <tr class="text-center">
                             <th><?= 'A' . $i; ?></th>
-                            <td><?=  substr($v, 0, 6); ?></td>
+                            <td><?=  substr($v, 0, 7); ?></td>
                         </tr>
                     <?php $i++; } ?>
                 </tbody>

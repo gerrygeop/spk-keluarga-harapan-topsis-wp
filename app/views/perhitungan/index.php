@@ -83,23 +83,23 @@
                         <?php
                             // TOPSIS
                             $Tps = array_sum($tp);
-                            for ($i=0; $i <= 9; $i++) { $Tpp[$i] = pow($tp[$i], 2); }
-                            $Tpp = array_sum($Tpp);
-                            $S = ($Tps * $Tps) / 10;
-                            $S = ($Tpp - $S) / 9;
+                            for ($i=0; $i <= $jumlah-1; $i++) { $Tpp[$i] = pow($tp[$i], 2); }
+                            $Tpp['aksen'] = array_sum($Tpp);
+                            $S = pow($Tps, 2) / $jumlah;
+                            $S = ($Tpp['aksen'] - $S) / 9;
                             $S = sqrt($S);
-                            $SE = ($S * $S) / 10;
+                            $SE = ($S * $S) / $jumlah;
                             $TP = sqrt($SE);
                             $TP = 100 - ($TP / 100);
 
                             // WP
                             $Wps = array_sum($wp);
-                            for ($i=0; $i <= 9; $i++) { $Wpp[$i] = pow($wp[$i], 2); }
-                            $Wpp = array_sum($Wpp);
-                            $S = ($Wps * $Wps) / 10;
-                            $S = ($Wpp - $S) / 9;
+                            for ($i=0; $i <= $jumlah-1; $i++) { $Wpp[$i] = pow($wp[$i], 2); }
+                            $Wpp['aksen'] = array_sum($Wpp);
+                            $S = ($Wps * $Wps) / $jumlah;
+                            $S = ($Wpp['aksen'] - $S) / 9;
                             $S = sqrt($S);
-                            $SE = ($S * $S) / 10;
+                            $SE = ($S * $S) / $jumlah;
                             $WP = sqrt($SE);
                             $WP = 100 - ($WP / 100);
                         ?>
