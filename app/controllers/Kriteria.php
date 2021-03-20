@@ -6,7 +6,7 @@ class Kriteria extends Controller {
     {
         $data['judul'] = 'Tabel Kriteria';
         $data['alt'] = $this->model('AlternatifModel')->getAllAlternatif();
-        $data['sub'] = $this->model('KriteriaModel')->getSubKriteria();
+        $data['sub'] = $this->model('KriteriaModel')->getAllBobotSub();
 
         $this->view('templates/header', $data);
         $this->view('kriteria/index', $data);

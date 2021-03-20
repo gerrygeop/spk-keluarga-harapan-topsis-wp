@@ -6,7 +6,7 @@ class Alternatif extends Controller {
     {
         $data['judul'] = 'Tabel Alternatif';
         $data['alt'] = $this->model('AlternatifModel')->getAllAlternatif();
-        $data['sub'] = $this->model('KriteriaModel')->getSubKriteria();
+        $data['sub'] = $this->model('KriteriaModel')->getAllSubKriteria();
 
         $this->view('templates/header', $data);
         $this->view('alternatif/index', $data);

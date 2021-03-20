@@ -1,30 +1,14 @@
 <?php
 
-class PerhitunganModel extends Controller{
+class PerhitunganModel{
 
 
     public function hitungTP($dataTp)
     {
         $alternatif = count($dataTp['alt']);
         $bobotKtr = [0.5, 0.3, 0.5, 0.3, 0.3, 0.3, 0.5, 0.3, 0.4, 0.3, 0.2];
-        
-        $k = 1;
-        foreach ($dataTp['alt'] as $alt) {
-            foreach ($dataTp['sub'] as $sub) {
-                $alt['c1'] == $sub['id_sub'] ? $X['C1-'.$k] = $sub['bobot_sub'] : 0;
-                $alt['c2'] == $sub['id_sub'] ? $X['C2-'.$k] = $sub['bobot_sub'] : 0;
-                $alt['c3'] == $sub['id_sub'] ? $X['C3-'.$k] = $sub['bobot_sub'] : 0;
-                $alt['c4'] == $sub['id_sub'] ? $X['C4-'.$k] = $sub['bobot_sub'] : 0;
-                $alt['c5'] == $sub['id_sub'] ? $X['C5-'.$k] = $sub['bobot_sub'] : 0;
-                $alt['c6'] == $sub['id_sub'] ? $X['C6-'.$k] = $sub['bobot_sub'] : 0;
-                $alt['c7'] == $sub['id_sub'] ? $X['C7-'.$k] = $sub['bobot_sub'] : 0;
-                $alt['c8'] == $sub['id_sub'] ? $X['C8-'.$k] = $sub['bobot_sub'] : 0;
-                $alt['c9'] == $sub['id_sub'] ? $X['C9-'.$k] = $sub['bobot_sub'] : 0;
-                $alt['c10'] == $sub['id_sub'] ? $X['C10-'.$k] = $sub['bobot_sub'] : 0;
-                $alt['c11'] == $sub['id_sub'] ? $X['C11-'.$k] = $sub['bobot_sub'] : 0;
-            }
-            $k++;
-        }
+
+        $X = $this->getSubBobot($dataTp['alt'], $dataTp['sub']);
 
         // Normalisasi
         for ($j=1; $j <= 11; $j++) { 
@@ -86,24 +70,7 @@ class PerhitunganModel extends Controller{
     public function hitungWP($dataWp)
     {
         $alternatif = count($dataWp['alt']);
-
-        $k = 1;
-        foreach ($dataWp['alt'] as $alt) {
-            foreach ($dataWp['sub'] as $sub) {
-                $alt['c1'] == $sub['id_sub'] ? $key['C1-'.$k] = $sub['bobot_sub'] : 0;
-                $alt['c2'] == $sub['id_sub'] ? $key['C2-'.$k] = $sub['bobot_sub'] : 0;
-                $alt['c3'] == $sub['id_sub'] ? $key['C3-'.$k] = $sub['bobot_sub'] : 0;
-                $alt['c4'] == $sub['id_sub'] ? $key['C4-'.$k] = $sub['bobot_sub'] : 0;
-                $alt['c5'] == $sub['id_sub'] ? $key['C5-'.$k] = $sub['bobot_sub'] : 0;
-                $alt['c6'] == $sub['id_sub'] ? $key['C6-'.$k] = $sub['bobot_sub'] : 0;
-                $alt['c7'] == $sub['id_sub'] ? $key['C7-'.$k] = $sub['bobot_sub'] : 0;
-                $alt['c8'] == $sub['id_sub'] ? $key['C8-'.$k] = $sub['bobot_sub'] : 0;
-                $alt['c9'] == $sub['id_sub'] ? $key['C9-'.$k] = $sub['bobot_sub'] : 0;
-                $alt['c10'] == $sub['id_sub'] ? $key['C10-'.$k] = $sub['bobot_sub'] : 0;
-                $alt['c11'] == $sub['id_sub'] ? $key['C11-'.$k] = $sub['bobot_sub'] : 0;
-            }
-            $k++;
-        }
+        $C = $this->getSubBobot($dataWp['alt'], $dataWp['sub']);
         
         // Nilai dari table kriteria simpan ke variabel nilai
         foreach ($dataWp['nilai'] as $n) {
@@ -118,7 +85,7 @@ class PerhitunganModel extends Controller{
         // Pangkat C1 => C11 ^ W1 => W11
         for ($i=1; $i <= $alternatif; $i++) { 
             for ($j=1; $j <= 11; $j++) { 
-                $p['p'.$j.'-'.$i] = pow($key['C'.$j.'-'.$i], $w['w'.$j]);
+                $p['p'.$j.'-'.$i] = pow($C['C'.$j.'-'.$i], $w['w'.$j]);
             }
         }
 
@@ -141,5 +108,28 @@ class PerhitunganModel extends Controller{
         $data['rankWp'] = $rank;
 
         return $data;
+    }
+
+    public function getSubBobot($alternatif, $subkriteria)
+    {
+        $k = 1;
+        foreach ($alternatif as $alt) {
+            foreach ($subkriteria as $sub) {
+                $alt['c1'] == $sub['id_sub'] ? $key['C1-'.$k] = $sub['bobot_sub'] : 0;
+                $alt['c2'] == $sub['id_sub'] ? $key['C2-'.$k] = $sub['bobot_sub'] : 0;
+                $alt['c3'] == $sub['id_sub'] ? $key['C3-'.$k] = $sub['bobot_sub'] : 0;
+                $alt['c4'] == $sub['id_sub'] ? $key['C4-'.$k] = $sub['bobot_sub'] : 0;
+                $alt['c5'] == $sub['id_sub'] ? $key['C5-'.$k] = $sub['bobot_sub'] : 0;
+                $alt['c6'] == $sub['id_sub'] ? $key['C6-'.$k] = $sub['bobot_sub'] : 0;
+                $alt['c7'] == $sub['id_sub'] ? $key['C7-'.$k] = $sub['bobot_sub'] : 0;
+                $alt['c8'] == $sub['id_sub'] ? $key['C8-'.$k] = $sub['bobot_sub'] : 0;
+                $alt['c9'] == $sub['id_sub'] ? $key['C9-'.$k] = $sub['bobot_sub'] : 0;
+                $alt['c10'] == $sub['id_sub'] ? $key['C10-'.$k] = $sub['bobot_sub'] : 0;
+                $alt['c11'] == $sub['id_sub'] ? $key['C11-'.$k] = $sub['bobot_sub'] : 0;
+            }
+            $k++;
+        }
+
+        return $key;
     }
 }

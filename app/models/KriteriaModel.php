@@ -18,19 +18,19 @@ class KriteriaModel {
         return $this->db->resultSet();
     }
 
-    public function getIdKriteria()
+    public function getNilaiKriteria()
     {
         $this->db->query('SELECT nilai_bk FROM '. $this->tbl_kriteria);
         return $this->db->resultSet();
     }
 
-    public function getSubKriteria()
+    public function getAllSubKriteria()
     {
         $this->db->query('SELECT * FROM '. $this->tbl_subKriteria);
         return $this->db->resultSet();
     }
 
-    public function getBobotSub()
+    public function getAllBobotSub()
     {
         $this->db->query('SELECT id_sub, bobot_sub FROM '. $this->tbl_subKriteria);
         return $this->db->resultSet();

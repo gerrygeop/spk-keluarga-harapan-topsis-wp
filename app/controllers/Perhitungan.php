@@ -5,8 +5,8 @@ class Perhitungan extends Controller {
     public function index()
     {
         $data['alt'] = $bobot['alt'] = $this->model('AlternatifModel')->getAllAlternatif();
-        $bobot['sub'] = $this->model('KriteriaModel')->getSubKriteria();
-        $bobot['nilai'] = $this->model('KriteriaModel')->getIdKriteria();
+        $bobot['sub'] = $this->model('KriteriaModel')->getAllSubKriteria();
+        $bobot['nilai'] = $this->model('KriteriaModel')->getNilaiKriteria();
 
         $data['tp'] = $this->model('PerhitunganModel')->hitungTP($bobot);
         $data['wp'] = $this->model('PerhitunganModel')->hitungWP($bobot);
@@ -20,8 +20,8 @@ class Perhitungan extends Controller {
     public function topsis()
     {
         $data['alt'] = $bobot['alt'] = $this->model('AlternatifModel')->getAllAlternatif();
-        $bobot['sub'] = $this->model('KriteriaModel')->getSubKriteria();
-        $bobot['nilai'] = $this->model('KriteriaModel')->getIdKriteria();
+        $bobot['sub'] = $this->model('KriteriaModel')->getAllSubKriteria();
+        $bobot['nilai'] = $this->model('KriteriaModel')->getNilaiKriteria();
 
         $data['tp'] = $this->model('PerhitunganModel')->hitungTP($bobot);
         $data['judul'] = 'Detail TOPSIS';
@@ -34,9 +34,9 @@ class Perhitungan extends Controller {
     public function wp()
     {
         $data['alt'] = $bobot['alt'] = $this->model('AlternatifModel')->getAllAlternatif();
-        $bobot['sub'] = $this->model('KriteriaModel')->getBobotSub();
+        $bobot['sub'] = $this->model('KriteriaModel')->getAllBobotSub();
 
-        $bobot['nilai'] = $this->model('KriteriaModel')->getIdKriteria();
+        $bobot['nilai'] = $this->model('KriteriaModel')->getNilaiKriteria();
 
         $data['wp'] = $this->model('PerhitunganModel')->hitungWP($bobot);
         $data['judul'] = 'Detail WP';

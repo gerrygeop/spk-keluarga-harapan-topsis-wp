@@ -24,8 +24,8 @@
                             </thead>
                             <tbody>
                                 <?php
-                                    $jumlah = count($data['tp']['rankTp']);
-                                    $lolos = 50 * $jumlah / 100;
+                                    $jumlahAlt = count($data['tp']['rankTp']);
+                                    $lolos = 50 * $jumlahAlt / 100;
                                     
                                     $i=1;
                                     foreach($data['tp']['rankTp'] as $key => $value) { 
@@ -43,7 +43,7 @@
                                         </td>
                                         <td>
                                             <?php
-                                                $tp[] = substr($value, 0, 6);
+                                                $tp[] = $value;
                                                 echo substr($value, 0, 6);
                                             ?>
                                         </td>
@@ -66,7 +66,7 @@
                         <ul>
                             <?php foreach($data['wp']['rankWp'] as $value) { ?>
                                 <li>
-                                    <?php $wp[] = substr($value, 0, 6); ?>
+                                    <?php $wp[] = $value; ?>
                                 </li>
                             <?php } ?>
                         </ul>
@@ -83,25 +83,35 @@
                         <?php
                             // TOPSIS
                             $Tps = array_sum($tp);
-                            for ($i=0; $i <= $jumlah-1; $i++) { $Tpp[$i] = pow($tp[$i], 2); }
+                            for ($i=0; $i <= $jumlahAlt-1; $i++) { 
+                                $Tpp[$i] = pow($tp[$i], 2);
+                            }
                             $Tpp['aksen'] = array_sum($Tpp);
-                            $S = pow($Tps, 2) / $jumlah;
-                            $S = ($Tpp['aksen'] - $S) / 9;
+                            
+                            $S = pow($Tps, 2) / $jumlahAlt;
+                            $S = ($Tpp['aksen'] - $S) / ($jumlahAlt-1);
                             $S = sqrt($S);
-                            $SE = ($S * $S) / $jumlah;
-                            $TP = sqrt($SE);
-                            $TP = 100 - ($TP / 100);
+                            echo "Standar Devition: $S <br>";
+                            $SE = pow($S, 2) / $jumlahAlt;
+                            $SE = sqrt($SE);
+                            echo "Standar Error: $SE <br><br>";
+                            $TP = 100 - ($SE / 100);
 
                             // WP
                             $Wps = array_sum($wp);
-                            for ($i=0; $i <= $jumlah-1; $i++) { $Wpp[$i] = pow($wp[$i], 2); }
+                            for ($i=0; $i <= $jumlahAlt-1; $i++) { 
+                                $Wpp[$i] = pow($wp[$i], 2); 
+                            }
                             $Wpp['aksen'] = array_sum($Wpp);
-                            $S = ($Wps * $Wps) / $jumlah;
-                            $S = ($Wpp['aksen'] - $S) / 9;
+
+                            $S = pow($Wps, 2) / $jumlahAlt;
+                            $S = ($Wpp['aksen'] - $S) / ($jumlahAlt-1);
                             $S = sqrt($S);
-                            $SE = ($S * $S) / $jumlah;
-                            $WP = sqrt($SE);
-                            $WP = 100 - ($WP / 100);
+                            echo "Standar Devition: $S <br>";
+                            $SE = pow($S, 2) / $jumlahAlt;
+                            $SE = sqrt($SE);
+                            echo "Standart Error: $SE <br>";
+                            $WP = 100 - ($SE / 100);
                         ?>
                         <table class="table">
                             <caption>
