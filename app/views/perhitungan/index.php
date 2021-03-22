@@ -18,8 +18,7 @@
                                 <tr>
                                     <th scope="col">Alt</th>
                                     <th scope="col">Nama</th>
-                                    <th scope="col">TOPSIS</th>
-                                    <th scope="col">Keterangan</th>
+                                    <th scope="col">Nilai</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -91,10 +90,8 @@
                             $S = pow($Tps, 2) / $jumlahAlt;
                             $S = ($Tpp['aksen'] - $S) / ($jumlahAlt-1);
                             $S = sqrt($S);
-                            echo "Standar Devition: $S <br>";
                             $SE = pow($S, 2) / $jumlahAlt;
                             $SE = sqrt($SE);
-                            echo "Standar Error: $SE <br><br>";
                             $TP = 100 - ($SE / 100);
 
                             // WP
@@ -107,10 +104,8 @@
                             $S = pow($Wps, 2) / $jumlahAlt;
                             $S = ($Wpp['aksen'] - $S) / ($jumlahAlt-1);
                             $S = sqrt($S);
-                            echo "Standar Devition: $S <br>";
                             $SE = pow($S, 2) / $jumlahAlt;
                             $SE = sqrt($SE);
-                            echo "Standart Error: $SE <br>";
                             $WP = 100 - ($SE / 100);
                         ?>
                         <table class="table">

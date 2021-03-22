@@ -112,7 +112,10 @@
                 </thead>
                 <tbody>
                     <?php 
-                        // arsort($data['wp']['rankWp']);
+                        $jumlahAlt = count($data['wp']['rankWp']);
+                        $lolos = 50 * $jumlahAlt / 100;
+                        
+                        $i=1;
                         foreach($data['wp']['rankWp'] as $key => $value) { 
                     ?>
                         <tr>
@@ -128,6 +131,14 @@
                             </td>
                             <td>
                                 <?= substr($value, 0, 6); ?>
+                            </td>
+                            <td>
+                                <?php if($i <= $lolos) {
+                                    echo '<span class="badge bg-success">Diterima</span>';
+                                    $i++;
+                                } else {
+                                    echo '<span class="badge bg-danger">Tidak diterima</span>';
+                                } ?>
                             </td>
                         </tr>
                     <?php } ?>
