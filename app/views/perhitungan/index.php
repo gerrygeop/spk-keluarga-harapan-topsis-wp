@@ -12,7 +12,7 @@
 
                 <div class="row px-2">
 
-                    <div class="col-sm col-lg-5 py-2 px-4 my-3 shadow border rounded">
+                    <div class="col-sm col-lg-6 py-2 px-4 my-3 shadow border rounded">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -34,9 +34,9 @@
                                             <?= 'A'.$key; ?>
                                         </th>
                                         <td>
-                                            <?php foreach ($data['alt'] as $alt) {
-                                                if ($alt['id_alt'] == $key) {
-                                                    echo $alt['nama'];
+                                            <?php foreach ($data['tp']['users'] as $n => $alt) {
+                                                if ($n == $key) {
+                                                    echo $alt;
                                                 }
                                             } ?>
                                         </td>
@@ -46,7 +46,7 @@
                                                 echo substr($value, 0, 6);
                                             ?>
                                         </td>
-                                        <td>
+                                        <td class="text-center">
                                             <?php if($i <= $lolos) {
                                                 echo '<span class="badge bg-success">Diterima</span>';
                                                 $i++;

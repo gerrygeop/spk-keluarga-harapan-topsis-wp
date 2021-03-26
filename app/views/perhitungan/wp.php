@@ -43,6 +43,7 @@
         </a>
     </div>
 
+
     <div class="collapse shadow px-4 py-3 rounded border mb-5" id="vektor-s">
         <h4 class="text-secondary">
             #Nilai Vektor S
@@ -69,6 +70,7 @@
             Nilai Vektor V
         </a>
     </div>
+
 
     <div class="collapse shadow px-4 py-3 rounded border mb-5" id="vektor-v">
         <h4 class="text-secondary">
@@ -97,6 +99,7 @@
         </a>
     </div>
 
+
     <div class="collapse shadow px-4 py-3 rounded border mb-5" id="ranking-wp">
         <h4 class="text-secondary">
             #Ranking Metode WP
@@ -123,16 +126,16 @@
                                 <?= 'A'.$key; ?>
                             </th>
                             <td>
-                                <?php foreach ($data['alt'] as $alt) {
-                                    if ($alt['id_alt'] == $key) {
-                                        echo $alt['nama'];
+                                <?php foreach ($data['wp']['users'] as $n => $alt) {
+                                    if ($n == $key) {
+                                        echo $alt;
                                     }
                                 } ?>
                             </td>
                             <td>
                                 <?= substr($value, 0, 6); ?>
                             </td>
-                            <td>
+                            <td class="text-center">
                                 <?php if($i <= $lolos) {
                                     echo '<span class="badge bg-success">Diterima</span>';
                                     $i++;

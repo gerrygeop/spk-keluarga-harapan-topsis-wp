@@ -26,12 +26,12 @@
                 </thead>
 
                 <tbody>
-                    <?php foreach ($data['alt'] as $alt) : ?>
+                    <?php $i=1; foreach ($data['alt'] as $alt) : ?>
                         <tr>
                             <th scope="row">
                             <!--FOR LOOP NOMOR ALT DARI 1 ... SETERUSNYA 
                                 GAK HARUS PAKE ID, BISA PAKE ANGKA BIASA KARNA GAK ADA PAGINATION-->
-                               <?= 'A' . $alt['id_alt']; ?>
+                               <?= 'A' . $i; ?>
                             </th>
                             <td scope="row">
                                 <?= $alt['nama']; ?>
@@ -114,7 +114,7 @@
                                 } ?>
                             </td>
                         </tr>
-                    <?php endforeach; ?>
+                    <?php $i++; endforeach; ?>
                 </tbody>
 
             </table>

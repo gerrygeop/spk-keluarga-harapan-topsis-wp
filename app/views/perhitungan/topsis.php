@@ -199,9 +199,9 @@
                                 <?= 'A'.$key;?>
                             </th>
                             <td>
-                                <?php foreach ($data['alt'] as $alt) {
-                                    if ($alt['id_alt'] == $key) {
-                                        echo $alt['nama'];
+                                <?php foreach ($data['tp']['users'] as $n => $alt) {
+                                    if ($n == $key) {
+                                        echo $alt;
                                     }
                                 } ?>
                             </td>

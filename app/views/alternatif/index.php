@@ -35,10 +35,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach ($data['alt'] as $alt) : ?>
+                    <?php $i=1; foreach ($data['alt'] as $alt) : ?>
                         <tr>
                             <th scope="row">
-                                <?= $alt['id_alt']; ?>
+                                <?= $i; ?>
                             </th>
                             <td scope="row" class="col-1">
                                 <?= $alt['nama']; ?>
@@ -111,7 +111,7 @@
                                 </form>
                             </td>
                         </tr>
-                    <?php endforeach; ?>
+                    <?php $i++; endforeach; ?>
                 </tbody>
             </table>
         </div>

@@ -58,10 +58,20 @@ class PerhitunganModel{
             $rank[$i] = $data['DM'.$i] / ($data['DM'.$i] + $data['DP'.$i]);
         }
 
+        $u=1;
+        foreach ($dataTp['alt'] as $alt) {
+            $users[$u] = $alt['nama'];
+            $u++;
+        }
+
         $data['X'] = $R;
         $data['V'] = $V;
+
+
         arsort($rank);
         $data['rankTp'] = $rank;
+
+        $data['users'] = $users;
 
         return $data;
     }
@@ -100,12 +110,20 @@ class PerhitunganModel{
             $rank[$i] = $V['V'.$i] = $S['S'.$i] / array_sum($S);
         }
 
+        $u=1;
+        foreach ($dataWp['alt'] as $alt) {
+            $users[$u] = $alt['nama'];
+            $u++;
+        }
+
         $data['W'] = $w;
         $data['S'] = $S;
         $data['V'] = $V;
 
         arsort($rank);
         $data['rankWp'] = $rank;
+
+        $data['users'] = $users;
 
         return $data;
     }
