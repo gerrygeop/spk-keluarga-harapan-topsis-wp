@@ -6,7 +6,12 @@ class PerhitunganModel{
     public function hitungTP($dataTp)
     {
         $alternatif = count($dataTp['alt']);
-        $bobotKtr = [0.5, 0.3, 0.5, 0.3, 0.3, 0.3, 0.5, 0.3, 0.4, 0.3, 0.2];
+
+        // $bobotKtr = [0.5, 0.3, 0.5, 0.3, 0.3, 0.3, 0.5, 0.3, 0.4, 0.3, 0.2];
+        // Bobot dari table kriteria simpan ke variabel bobotKtr
+        foreach ($dataTp['nilai'] as $n) {
+            $bobotKtr[] = $n['nilai_bk'];
+        }
 
         $X = $this->getSubBobot($dataTp['alt'], $dataTp['sub']);
 
@@ -67,10 +72,8 @@ class PerhitunganModel{
         $data['X'] = $R;
         $data['V'] = $V;
 
-
         arsort($rank);
         $data['rankTp'] = $rank;
-
         $data['users'] = $users;
 
         return $data;
