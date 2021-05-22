@@ -44,10 +44,10 @@
                     <a class="nav-link" href="<?= BASEURL; ?>/kriteria">Kriteria</a>
 
                     <?php if (isset($_SESSION['user_id'])) : ?>
-                        <a class="nav-link" href="<?= BASEURL; ?>/alternatif">Alternatif</a>
+                        <a class="nav-link" href="<?= BASEURL; ?>/alternatif">Penerima</a>
                     <?php endif; ?>
 
-                    <a class="nav-link" href="<?= BASEURL; ?>/home/about">About</a>
+                    <a class="nav-link" href="<?= BASEURL; ?>/home/help">Help</a>
                     
                     <?php if (isset($_SESSION['user_id'])) : ?>
                         <a class="nav-link btn btn-outline-info btn-sm text-uppercase px-3 ms-auto" href="<?= BASEURL; ?>/auth/logout">Logout</a>

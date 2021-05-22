@@ -11,13 +11,13 @@ class Home extends Controller {
         $this->view('templates/footer');
     }
 
-    public function about()
+    public function help()
     {
-        $data['judul'] = 'Keterangan';
+        $data['judul'] = 'Help';
         // $data['kriteria'] = $this->model('KriteriaModel')->getAllKriteria();
 
         $this->view('templates/header', $data);
-        $this->view('home/about');
+        $this->view('home/help');
         $this->view('templates/footer');
     }
 

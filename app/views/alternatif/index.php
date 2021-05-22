@@ -12,11 +12,16 @@
         </div>
 
         <div class="px-3">
-            <h3 class="text-secondary"><?= $data['judul']; ?></h3>
+            <div class="mb-3">
+                <h3 class="text-secondary m-0"><?= $data['judul']; ?></h3>
+                <small class="text-sm text-secondary">*Tabel ini menampilkan data calon penerima PKH.</small>
+            </div>
             
             <a href="<?= BASEURL; ?>/alternatif/create" class="btn btn-primary my-3">
-                <i class="bi bi-plus-square"></i>
-                Tambah Alternatif
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-lg me-1" viewBox="0 0 16 16">
+                    <path d="M8 0a1 1 0 0 1 1 1v6h6a1 1 0 1 1 0 2H9v6a1 1 0 1 1-2 0V9H1a1 1 0 0 1 0-2h6V1a1 1 0 0 1 1-1z"/>
+                </svg>
+                <span>Data<span>
             </a>
         </div>
 
@@ -100,15 +105,15 @@
                             </td>
 
                             <td scope="row" class="col-1 text-center">
-                                <a href="<?= BASEURL; ?>/alternatif/edit/<?= $alt['id_alt']; ?>" class="btn btn-primary btn-sm pt-0">
+                                <a href="<?= BASEURL; ?>/alternatif/edit/<?= $alt['id_alt']; ?>" class="btn btn-primary btn-sm pt-0" title="Edit">
                                     <i class="bi bi-pencil-square"></i>
                                 </a>
 
-                                <form action="<?= BASEURL; ?>/alternatif/delete/<?= $alt['id_alt']; ?>" method="POST" class="d-inline">
+                                <!-- <form action="<?= BASEURL; ?>/alternatif/delete/<?= $alt['id_alt']; ?>" method="POST" class="d-inline">
                                     <button class="btn btn-danger btn-sm pt-0" onclick="return confirm('Yakin?');">
                                         <i class="bi bi-trash"></i>
                                     </button>
-                                </form>
+                                </form> -->
                             </td>
                         </tr>
                     <?php $i++; endforeach; ?>

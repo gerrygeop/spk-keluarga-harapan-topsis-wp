@@ -1,6 +1,27 @@
 <div class="container">
-    <div class="my-5 py-4 px-3 rounded border shadow">
-        <h1 class="mb-3">Keterangan</h1>
+    <div class="my-5 py-4 px-4 mb-5 rounded shadow">
+        <h2 class="mb-4">Help</h2>
+        <div class="mb-3">
+            <p class="text-secondary text-sm">
+                **Pengguna dapat melihat halaman Home dan halaman kriteria
+            </p>
+            <hr>
+            <p class="text-secondary text-sm">
+                **Pada halaman Home, pengguna dapatmelihat penjelasan ringkas mengenai program keluarga harapan
+            </p>
+            <hr>
+            <p class="text-secondary text-sm">
+                **Pada halaman kriteria,pengguna dapat melihat tabel yang menampilkan nilai kriteria dari tiap data calon penerima PKH
+            </p>
+            <hr>
+            <p class="text-secondary text-sm">
+                **Pada halaman kriteria pengguna juga dapat melihat hasil perbandingan & proses perhitungan metode FMADM TOPSIS dan FMADM WP
+            </p>
+        </div>
+    </div>
+
+    <div class="my-5 py-4 px-3 rounded shadow">
+        <h2 class="mb-3">Keterangan</h2>
         <hr>
         <div class="row row-cols-1 row-cols-md-3">
 
@@ -9,10 +30,11 @@
                     <div class="card-header w-full fw-bold fs-5 bg-primary text-white">
                         <span class="badge bg-warning">C1</span> Ibu Hamil
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">Ada</li>
-                        <li class="list-group-item">Tidak Ada</li>
-                    </ul>
+                    <div class="card-body">
+                        <p class="card-text">
+                            C1 adalah ibu hamil, dengan subkriteria ada dan tidak ada
+                        </p>
+                    </div>
                 </div>
             </div>
 

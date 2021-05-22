@@ -1,14 +1,15 @@
 <div class="container-fluid">
     <div class="shadow p-4 rounded border mb-5">
 
-    <div class="row justify-content-between">
-        <div class="col">
-            <h3 class="text-secondary mb-4"><?= $data['judul'] ?></h3>
+        <div class="row justify-content-between mb-4">
+            <div class="col">
+                <h3 class="text-secondary "><?= $data['judul'] ?></h3>
+                <small class="text-sm text-secondary">*Tabel ini menampilkan nilai kriteria pada setiap data calon penerima PKH.</small>
+            </div>
+            <div class="col text-end">
+                <a href="<?=BASEURL;?>/perhitungan" class="btn btn-warning px-3 py-2">Hasil Perhitungan</a>
+            </div>
         </div>
-        <div class="col text-end">
-            <a href="<?=BASEURL;?>/perhitungan" class="btn btn-warning px-3 py-2">Hasil Perhitungan</a>
-        </div>
-    </div>
         
         <div class="p-2 border border-1 rounded table-responsive mb-3">
 
