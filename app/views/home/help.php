@@ -3,15 +3,15 @@
         <h2 class="mb-4">Help</h2>
         <div class="mb-3">
             <p class="text-secondary text-sm">
-                **Pengguna dapat melihat halaman Home dan halaman kriteria
+                **Pengguna hanya dapat melihat halaman Home dan halaman kriteria
             </p>
             <hr>
             <p class="text-secondary text-sm">
-                **Pada halaman Home, pengguna dapatmelihat penjelasan ringkas mengenai program keluarga harapan
+                **Pada halaman Home, pengguna dapat melihat penjelasan ringkas mengenai Program Keluarga Harapan
             </p>
             <hr>
             <p class="text-secondary text-sm">
-                **Pada halaman kriteria,pengguna dapat melihat tabel yang menampilkan nilai kriteria dari tiap data calon penerima PKH
+                **Pada halaman kriteria, pengguna dapat melihat tabel yang menampilkan nilai kriteria dari tiap data calon penerima PKH
             </p>
             <hr>
             <p class="text-secondary text-sm">
@@ -21,7 +21,7 @@
     </div>
 
     <div class="my-5 py-4 px-3 rounded shadow">
-        <h2 class="mb-3">Keterangan</h2>
+        <h2 class="mb-3">Keterangan kriteria</h2>
         <hr>
         <div class="row row-cols-1 row-cols-md-3">
 
@@ -32,18 +32,10 @@
                     </div>
                     <div class="card-body">
                         <p class="card-text">
-                            C1 adalah ibu hamil, dengan subkriteria ada dan tidak ada
+                            <b>C1</b> adalah Ibu hamil, dengan subkriteria:
                         </p>
                     </div>
-                </div>
-            </div>
-
-            <div class="col mb-5">
-                <div class="card">
-                    <div class="card-header w-full fw-bold fs-5 bg-primary text-white">
-                        <span class="badge bg-warning">C2</span> Balita
-                    </div>
-                    <ul class="list-group list-group-flush">
+                    <ul class="list-group list-group-flush fw-bold">
                         <li class="list-group-item">Ada</li>
                         <li class="list-group-item">Tidak Ada</li>
                     </ul>
@@ -53,10 +45,32 @@
             <div class="col mb-5">
                 <div class="card">
                     <div class="card-header w-full fw-bold fs-5 bg-primary text-white">
-                    <span class="badge bg-warning">C3</span> Lansia
+                        <span class="badge bg-warning">C2</span> Balita
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">umur >70 tahun</li>
+                    <div class="card-body">
+                        <p class="card-text">
+                            <b>C2</b> adalah Balita, dengan subkriteria:
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush fw-bold">
+                        <li class="list-group-item">Ada</li>
+                        <li class="list-group-item">Tidak Ada</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col mb-5">
+                <div class="card">
+                    <div class="card-header w-full fw-bold fs-5 bg-primary text-white">
+                        <span class="badge bg-warning">C3</span> Lansia
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            <b>C3</b> adalah Lansia, dengan subkriteria:
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush fw-bold">
+                        <li class="list-group-item">umur > 70 tahun</li>
                         <li class="list-group-item">umur 65-69 tahun</li>
                         <li class="list-group-item">umur 60-64 tahun</li>
                         <li class="list-group-item">umur < 69 tahun</li>
@@ -69,7 +83,12 @@
                     <div class="card-header w-full fw-bold fs-5 bg-primary text-white">
                         <span class="badge bg-warning">C4</span> Anak SD
                     </div>
-                    <ul class="list-group list-group-flush">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <b>C4</b> adalah Anak SD, dengan subkriteria:
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush fw-bold">
                         <li class="list-group-item">Ada</li>
                         <li class="list-group-item">Tidak Ada</li>
                     </ul>
@@ -81,7 +100,12 @@
                     <div class="card-header w-full fw-bold fs-5 bg-primary text-white">
                         <span class="badge bg-warning">C5</span> Anaka SMP
                     </div>
-                    <ul class="list-group list-group-flush">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <b>C5</b> adalah Anak SMP, dengan subkriteria:
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush fw-bold">
                         <li class="list-group-item">Ada</li>
                         <li class="list-group-item">Tidak Ada</li>
                     </ul>
@@ -91,9 +115,14 @@
             <div class="col mb-5">
                 <div class="card">
                     <div class="card-header w-full fw-bold fs-5 bg-primary text-white">
-                    <span class="badge bg-warning">C6</span> Anak SMA
+                        <span class="badge bg-warning">C6</span> Anak SMA
                     </div>
-                    <ul class="list-group list-group-flush">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <b>C6</b> adalah Anak SMA, dengan subkriteria:
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush fw-bold">
                         <li class="list-group-item">Ada</li>
                         <li class="list-group-item">Tidak Ada</li>
                     </ul>
@@ -103,9 +132,14 @@
             <div class="col mb-5">
                 <div class="card">
                     <div class="card-header w-full fw-bold fs-5 bg-primary text-white">
-                    <span class="badge bg-warning">C7</span> Penyandang disabilitas
+                        <span class="badge bg-warning">C7</span> Penyandang Disabilitas
                     </div>
-                    <ul class="list-group list-group-flush">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <b>C7</b> adalah Penyandang Disabilitas, dengan subkriteria:
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush fw-bold">
                         <li class="list-group-item">Disabilitas Berat</li>
                         <li class="list-group-item">Disabilitas Mental</li>
                         <li class="list-group-item">Disabilitas Fisik</li>
@@ -117,10 +151,15 @@
             <div class="col mb-5">
                 <div class="card">
                     <div class="card-header w-full fw-bold fs-5 bg-primary text-white">
-                    <span class="badge bg-warning">C8</span> Pekerjaan
+                        <span class="badge bg-warning">C8</span> Pekerjaan
                     </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item"> Pengangguran</li>
+                    <div class="card-body">
+                        <p class="card-text">
+                            <b>C8</b> adalah Pekerjaan, dengan subkriteria:
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush fw-bold">
+                        <li class="list-group-item">Pengangguran</li>
                         <li class="list-group-item">Pedagang Kecil</li>
                         <li class="list-group-item">Pedagang Besar</li>
                         <li class="list-group-item">Buruh/Karyawwan</li>
@@ -132,9 +171,14 @@
             <div class="col mb-5">
                 <div class="card">
                     <div class="card-header w-full fw-bold fs-5 bg-primary text-white">
-                    <span class="badge bg-warning">C9</span> Status Rumah
+                        <span class="badge bg-warning">C9</span> Status Rumah
                     </div>
-                    <ul class="list-group list-group-flush">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <b>C9</b> adalah Status Rumah, dengan subkriteria:
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush fw-bold">
                         <li class="list-group-item">Menumpang</li>
                         <li class="list-group-item">Menyewa</li>
                         <li class="list-group-item">Milik sendiri</li>
@@ -147,7 +191,12 @@
                     <div class="card-header w-full fw-bold fs-5 bg-primary text-white">
                         <span class="badge bg-warning">C10</span> Jumlah Anggota Keluarga
                     </div>
-                    <ul class="list-group list-group-flush">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <b>C10</b> adalah Jumlah Anggota Keluarga, dengan subkriteria:
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush fw-bold">
                         <li class="list-group-item"> > 7orang </li>
                         <li class="list-group-item">5-6 orang</li>
                         <li class="list-group-item">3-4 orang</li>
@@ -162,7 +211,12 @@
                     <div class="card-header w-full fw-bold fs-5 bg-primary text-white">
                         <span class="badge bg-warning">C11</span> Aset Kepemilikan
                     </div>
-                    <ul class="list-group list-group-flush">
+                    <div class="card-body">
+                        <p class="card-text">
+                            <b>C11</b> adalah Aset Kepemilikan, dengan subkriteria:
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush fw-bold">
                         <li class="list-group-item"> Tidak Memiliki Aset </li>
                         <li class="list-group-item">Barang Elektronik </li>
                         <li class="list-group-item">Emas/ Perhiasan</li>

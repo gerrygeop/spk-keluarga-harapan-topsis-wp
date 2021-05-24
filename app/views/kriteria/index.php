@@ -18,11 +18,13 @@
                     <tr>
                         <th scope="col">#</th>
                         <th scope="col">Nama</th>
-                        <?php for ($i=1; $i <= 11; $i++) { ?>
+                        <?php $i=1; foreach ($data['ktr'] as $ktr) : ?>
                             <th scope="col">
-                                <?= 'C' . $i; ?>
+                                <button type="button" class="btn btn-light btn-sm fw-bold" data-bs-toggle="tooltip" data-bs-placement="top" title="<?= $ktr['nama_ktr']; ?>">
+                                    <?= 'C' . $i; ?>
+                                </button>
                             </th>
-                        <?php } ?>
+                        <?php $i++; endforeach; ?>
                     </tr>
                 </thead>
 
