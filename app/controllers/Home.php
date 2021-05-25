@@ -14,10 +14,13 @@ class Home extends Controller {
     public function help()
     {
         $data['judul'] = 'Help';
-        // $data['kriteria'] = $this->model('KriteriaModel')->getAllKriteria();
+
+        for ($i=1; $i <= 11; $i++) { 
+            $data['c'.$i] = $this->model('KriteriaModel')->getSubKriteriaById($i);
+        }
 
         $this->view('templates/header', $data);
-        $this->view('home/help');
+        $this->view('home/help', $data);
         $this->view('templates/footer');
     }
 

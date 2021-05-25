@@ -38,7 +38,7 @@ class KriteriaModel {
 
     public function getSubKriteriaById($id)
     {
-        $this->db->query('SELECT id_sub, nama_sub FROM '. $this->tbl_subKriteria .' JOIN '. $this->tbl_pivotKtr .' USING(id_sub) WHERE id_ktr=:id');
+        $this->db->query('SELECT id_sub, nama_sub, bobot_sub FROM '. $this->tbl_subKriteria .' JOIN '. $this->tbl_pivotKtr .' USING(id_sub) WHERE id_ktr=:id');
         $this->db->bind('id', $id);
 
         return $this->db->resultSet();

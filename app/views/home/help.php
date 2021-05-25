@@ -1,6 +1,6 @@
 <div class="container">
     <div class="my-5 py-4 px-4 mb-5 rounded shadow">
-        <h2 class="mb-4">Help</h2>
+        <h2 class="mb-4"><?= '#' . $data['judul']; ?></h2>
         <div class="mb-3">
             <p class="text-secondary text-sm">
                 **Pengguna hanya dapat melihat halaman Home dan halaman kriteria
@@ -36,8 +36,12 @@
                         </p>
                     </div>
                     <ul class="list-group list-group-flush fw-bold">
-                        <li class="list-group-item">Ada</li>
-                        <li class="list-group-item">Tidak Ada</li>
+                        <?php foreach ($data['c1'] as $item) : ?>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <?= $item['nama_sub']; ?>
+                                <span class="badge bg-primary rounded-pill fw-light">bobot: <?= $item['bobot_sub'] ;?></span>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
             </div>
@@ -53,8 +57,12 @@
                         </p>
                     </div>
                     <ul class="list-group list-group-flush fw-bold">
-                        <li class="list-group-item">Ada</li>
-                        <li class="list-group-item">Tidak Ada</li>
+                        <?php foreach ($data['c2'] as $item) : ?>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <?= $item['nama_sub']; ?>
+                                <span class="badge bg-primary rounded-pill fw-light">bobot: <?= $item['bobot_sub'] ;?></span>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
             </div>
@@ -70,10 +78,12 @@
                         </p>
                     </div>
                     <ul class="list-group list-group-flush fw-bold">
-                        <li class="list-group-item">umur > 70 tahun</li>
-                        <li class="list-group-item">umur 65-69 tahun</li>
-                        <li class="list-group-item">umur 60-64 tahun</li>
-                        <li class="list-group-item">umur < 69 tahun</li>
+                        <?php foreach ($data['c3'] as $item) : ?>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <?= $item['nama_sub']; ?>
+                                <span class="badge bg-primary rounded-pill fw-light">bobot: <?= $item['bobot_sub'] ;?></span>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
             </div>
@@ -89,8 +99,12 @@
                         </p>
                     </div>
                     <ul class="list-group list-group-flush fw-bold">
-                        <li class="list-group-item">Ada</li>
-                        <li class="list-group-item">Tidak Ada</li>
+                        <?php foreach ($data['c4'] as $item) : ?>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <?= $item['nama_sub']; ?>
+                                <span class="badge bg-primary rounded-pill fw-light">bobot: <?= $item['bobot_sub'] ;?></span>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
             </div>
@@ -106,8 +120,12 @@
                         </p>
                     </div>
                     <ul class="list-group list-group-flush fw-bold">
-                        <li class="list-group-item">Ada</li>
-                        <li class="list-group-item">Tidak Ada</li>
+                        <?php foreach ($data['c5'] as $item) : ?>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <?= $item['nama_sub']; ?>
+                                <span class="badge bg-primary rounded-pill fw-light">bobot: <?= $item['bobot_sub'] ;?></span>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
             </div>
@@ -123,8 +141,12 @@
                         </p>
                     </div>
                     <ul class="list-group list-group-flush fw-bold">
-                        <li class="list-group-item">Ada</li>
-                        <li class="list-group-item">Tidak Ada</li>
+                        <?php foreach ($data['c6'] as $item) : ?>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <?= $item['nama_sub']; ?>
+                                <span class="badge bg-primary rounded-pill fw-light">bobot: <?= $item['bobot_sub'] ;?></span>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
             </div>
@@ -140,10 +162,12 @@
                         </p>
                     </div>
                     <ul class="list-group list-group-flush fw-bold">
-                        <li class="list-group-item">Disabilitas Berat</li>
-                        <li class="list-group-item">Disabilitas Mental</li>
-                        <li class="list-group-item">Disabilitas Fisik</li>
-                        <li class="list-group-item">Tidak Ada</li>
+                        <?php foreach ($data['c7'] as $item) : ?>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <?= $item['nama_sub']; ?>
+                                <span class="badge bg-primary rounded-pill fw-light">bobot: <?= $item['bobot_sub'] ;?></span>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
             </div>
@@ -159,11 +183,12 @@
                         </p>
                     </div>
                     <ul class="list-group list-group-flush fw-bold">
-                        <li class="list-group-item">Pengangguran</li>
-                        <li class="list-group-item">Pedagang Kecil</li>
-                        <li class="list-group-item">Pedagang Besar</li>
-                        <li class="list-group-item">Buruh/Karyawwan</li>
-                        <li class="list-group-item">PNS/POLRI/BUMN</li>
+                        <?php foreach ($data['c8'] as $item) : ?>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <?= $item['nama_sub']; ?>
+                                <span class="badge bg-primary rounded-pill fw-light">bobot: <?= $item['bobot_sub'] ;?></span>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
             </div>
@@ -179,9 +204,12 @@
                         </p>
                     </div>
                     <ul class="list-group list-group-flush fw-bold">
-                        <li class="list-group-item">Menumpang</li>
-                        <li class="list-group-item">Menyewa</li>
-                        <li class="list-group-item">Milik sendiri</li>
+                        <?php foreach ($data['c9'] as $item) : ?>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <?= $item['nama_sub']; ?>
+                                <span class="badge bg-primary rounded-pill fw-light">bobot: <?= $item['bobot_sub'] ;?></span>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
             </div>
@@ -197,11 +225,12 @@
                         </p>
                     </div>
                     <ul class="list-group list-group-flush fw-bold">
-                        <li class="list-group-item"> > 7orang </li>
-                        <li class="list-group-item">5-6 orang</li>
-                        <li class="list-group-item">3-4 orang</li>
-                        <li class="list-group-item">2-1 orang</li>
-                        <li class="list-group-item">sendiri/sebatang kara</li>
+                        <?php foreach ($data['c10'] as $item) : ?>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <?= $item['nama_sub']; ?>
+                                <span class="badge bg-primary rounded-pill fw-light">bobot: <?= $item['bobot_sub'] ;?></span>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
             </div>
@@ -217,10 +246,12 @@
                         </p>
                     </div>
                     <ul class="list-group list-group-flush fw-bold">
-                        <li class="list-group-item"> Tidak Memiliki Aset </li>
-                        <li class="list-group-item">Barang Elektronik </li>
-                        <li class="list-group-item">Emas/ Perhiasan</li>
-                        <li class="list-group-item">Kendaraan Umum</li>
+                        <?php foreach ($data['c11'] as $item) : ?>
+                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                                <?= $item['nama_sub']; ?>
+                                <span class="badge bg-primary rounded-pill fw-light">bobot: <?= $item['bobot_sub'] ;?></span>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
             </div>
