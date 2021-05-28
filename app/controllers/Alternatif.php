@@ -28,12 +28,20 @@ class Alternatif extends Controller {
 
     public function store()
     {
+        $validation = "/^[a-zA-Z]*$/";
+        if (!preg_match($validation, $_POST['nama'])) {
+            Flasher::setFlash('Nama tidak boleh menggunakan', 'angka', 'danger');
+            header('Location: ' . BASEURL . '/alternatif/create');
+            exit;
+        }
+
+        $_POST['nama'] = htmlspecialchars($_POST['nama']);
         if ($this->model('AlternatifModel')->tambahAlternatif($_POST) > 0) {
-            Flasher::setFlash('Berhasil', 'Ditambahkan', 'success');
+            Flasher::setFlash('Data Alternatif Berhasil', 'Ditambahkan', 'success');
             header('Location: ' . BASEURL . '/alternatif');
             exit;
         } else {
-            Flasher::setFlash('Gagal', 'Ditambahkan', 'danger');
+            Flasher::setFlash('Data Alternatif Gagal', 'Ditambahkan', 'danger');
             header('Location: ' . BASEURL . '/alternatif');
             exit;
         }
@@ -55,12 +63,13 @@ class Alternatif extends Controller {
 
     public function update()
     {
+        $_POST['nama'] = htmlspecialchars($_POST['nama']);
         if ($this->model('AlternatifModel')->updateAlternatif($_POST) > 0) {
-            Flasher::setFlash('Berhasil', 'Diedit', 'success');
+            Flasher::setFlash('Data Alternatif Berhasil', 'Diedit', 'success');
             header('Location: ' . BASEURL . '/alternatif');
             exit;
         } else {
-            Flasher::setFlash('Gagal', 'Diedit', 'danger');
+            Flasher::setFlash('Data Alternatif Gagal', 'Diedit', 'danger');
             header('Location: ' . BASEURL . '/alternatif');
             exit;
         }
@@ -69,11 +78,11 @@ class Alternatif extends Controller {
     public function delete($id)
     {
         if ($this->model('AlternatifModel')->hapusAlternatif($id) > 0) {
-            Flasher::setFlash('Berhasil', 'Dihapus', 'success');
+            Flasher::setFlash('Data Alternatif Berhasil', 'Dihapus', 'success');
             header('Location: ' . BASEURL . '/alternatif');
             exit;
         } else {
-            Flasher::setFlash('Gagal', 'Dihapus', 'danger');
+            Flasher::setFlash('Data Alternatif Gagal', 'Dihapus', 'danger');
             header('Location: ' . BASEURL . '/alternatif');
             exit;
         }

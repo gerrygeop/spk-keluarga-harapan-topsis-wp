@@ -3,6 +3,13 @@
 } ?>
 
 <div class="container">
+
+    <div class="row">
+        <div class="col-sm col-lg-5 mx-auto">
+            <?php Flasher::flash(); ?>
+        </div>
+    </div>
+
     <div class="row">
         <div class="col-sm col-lg-5 mx-auto shadow border rounded mt-5 p-5">
             <form action="<?= BASEURL; ?>/auth/registerStore" method="POST">
@@ -14,7 +21,7 @@
                     <label for="password" class="form-label">Password</label>
                     <input type="password" class="form-control" id="password" name="password" required>
                 </div>
-                <button type="submit" class="btn btn-primary">Register</button>
+                <button type="submit" class="btn btn-primary w-100">Register</button>
             </form>
         </div>
     </div>

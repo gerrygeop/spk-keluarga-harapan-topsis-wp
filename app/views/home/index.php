@@ -1,4 +1,11 @@
 <div class="container">
+
+    <div class="row">
+        <div class="col-6">
+            <?php Flasher::flash(); ?>
+        </div>
+    </div>
+
     <div class="my-5 p-5 rounded border shadow">
         <h1 class="text-center mb-3">Sistem Penentu Keluarga Harapan</h1>
         <hr>

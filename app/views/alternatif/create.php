@@ -4,6 +4,12 @@
 
 <div class="container shadow border rounded px-5 py-3 mb-5">
 
+    <div class="row">
+        <div class="col-12">
+            <?php Flasher::flash(); ?>
+        </div>
+    </div>
+
     <div class="row my-3">
         <div class="col-12">
             <h3 class="text-secondary"><?= '#' . $data['judul']; ?></h3>
