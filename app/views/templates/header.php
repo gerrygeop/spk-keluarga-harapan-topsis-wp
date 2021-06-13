@@ -19,12 +19,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+
     <style>
         .font-poppins{
             font-family: 'Poppins', sans-serif;
         }
         .navbar-brand{
-            font-family: 'Kaushan Script', cursive;
+            font-family: 'Kaushan Script', monospace;
         }
     </style>
 
@@ -32,9 +35,11 @@
 </head>
 <body class="font-poppins">
 
-    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-primary mb-3 py-3 shadow">
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-primary mb-3 py-2 shadow">
         <div class="container">
-            <a class="navbar-brand fs-4 text-light" href="<?= BASEURL; ?>/home">WendyKurn.com</a>
+            <a class="navbar-brand fs-3 text-light" href="<?= BASEURL; ?>/home">
+                <img src="<?=BASEURL;?>/img/logo-dinsos.png" alt="Logo" width="60">
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

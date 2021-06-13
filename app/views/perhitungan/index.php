@@ -1,32 +1,17 @@
+
 <div class="container">
     <div class="px-2 py-3 mb-5">
         <h3 class="text-secondary mb-4">
-            Hasil Rekomendasi
+            #Hasil Rekomendasi
         </h3>
 
-        <!-- Start perhitungan -->
         <div class="d-flex flex-column">
 
             <div class="mb-5">
 
                 <div class="mb-4">
-                    <h4 class="text-secondary mb-0">#Pengujian Tingkat Akurasi</h4>
                     <div class="row justify-content-center px-2">
-                        <div class="col py-2 px-4 my-3 shadow border border-1 rounded table-responsive">
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>TOPSIS</th>
-                                        <th>WP</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>94%</td>
-                                        <td>90%</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                        <div class="col py-4 px-4 my-3 shadow border border-1 rounded table-responsive" id="chartAkurasi" style="height: 450px;">
                         </div>
                     </div>
                 </div>
@@ -34,23 +19,11 @@
                 <div>
                     <h4 class="text-secondary mb-0">#Uji Sensitivitas</h4>
                     <div class="row justify-content-center px-2">
-                        <div class="col py-2 px-4 my-3 shadow border border-1 rounded table-responsive">
+                        <div class="col py-2 px-4 my-3 shadow border border-1 rounded table-responsive" id="chartSensitivitas" style="height: 450px;">
                             <table class="table">
                                 <caption>
                                     Berdasarkan pengujian menggunakan <b>Tingkat Akurasi</b> dan <b>Uji Sensitivitas</b> maka metode terbaik adalah metode FMADM TOPSIS karena memiliki nilai pengujian yang lebih besar
                                 </caption>
-                                <thead>
-                                    <tr>
-                                        <th>TOPSIS</th>
-                                        <th>WP</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>4,0537%</td>
-                                        <td>3,9049%</td>
-                                    </tr>
-                                </tbody>
                             </table>
                         </div>
                     </div>
@@ -124,3 +97,60 @@
 
     </div>
 </div>
+
+<?php
+    $dataAkurasi = array(
+        array("y" => 94, "indexLabel"=> "94%", "label" => "TOPSIS"),
+        array("y" => 90, "indexLabel"=> "90%", "label" => "WP"),
+    );
+
+    $dataSensitivitas = array(
+        array("y" => 4.0537, "indexLabel"=> "4,0537%", "label" => "TOPSIS"),
+        array("y" => 3.9049, "indexLabel"=> "3.9049%", "label" => "WP"),
+    );
+?>
+
+<script type="text/javascript">
+
+    window.onload = function () {
+        var chartAkurasi = new CanvasJS.Chart("chartAkurasi", {
+            animationEnabled: true,
+            exportEnabled: true,
+            theme: "light1", // "light1", "light2", "dark1", "dark2"
+            title:{
+                text: "Hasil Pengujian Tingkat Akurasi"
+            },
+            axisY:{
+                includeZero: true
+            },
+            data: [{
+                type: "column", //change type to bar, line, area, pie, etc
+                indexLabel: "{y}", //Shows y value on all Data Points
+                indexLabelFontColor: "#5A5757",
+                indexLabelPlacement: "outside",   
+                dataPoints: <?php echo json_encode($dataAkurasi, JSON_NUMERIC_CHECK); ?>
+            }]
+        });
+
+        var chartSensitivitas = new CanvasJS.Chart("chartSensitivitas", {
+            animationEnabled: true,
+            exportEnabled: true,
+            theme: "light2", // "light1", "light2", "dark1", "dark2"
+            title:{
+                text: "Hasil Uji Sensitivitas"
+            },
+            axisY:{
+                includeZero: true
+            },
+            data: [{
+                type: "column", //change type to bar, line, area, pie, etc
+                indexLabel: "{y}", //Shows y value on all Data Points
+                indexLabelFontColor: "#5A5757",
+                indexLabelPlacement: "outside",   
+                dataPoints: <?php echo json_encode($dataSensitivitas, JSON_NUMERIC_CHECK); ?>
+            }]
+        });
+        chartAkurasi.render();
+        chartSensitivitas.render();
+    }
+</script>
