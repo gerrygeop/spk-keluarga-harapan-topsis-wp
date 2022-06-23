@@ -1,6 +1,6 @@
 <?php
 
-define('BASEURL', 'http://keluarga-harapan.test');
+define('BASEURL', 'http://spk-keluarga-harapan-wendy.test');
 
 // DB
 
