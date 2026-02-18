@@ -1,0 +1,20 @@
+{
+  "name": "gerrygeop/spk-keluarga-harapan",
+  "description": "SPK Keluarga Harapan (Refactored)",
+  "type": "project",
+  "require": {
+    "vlucas/phpdotenv": "^5.5"
+  },
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Gerry",
+      "email": "gerry@example.com"
+    }
+  ]
+}

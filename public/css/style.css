@@ -1,0 +1,124 @@
+:root {
+  --primary-color: #4e73df;
+  --secondary-color: #858796;
+  --success-color: #1cc88a;
+  --info-color: #36b9cc;
+  --warning-color: #f6c23e;
+  --danger-color: #e74a3b;
+  --light-color: #f8f9fc;
+  --dark-color: #5a5c69;
+}
+
+body {
+  background-color: #f8f9fc; /* Light gray background */
+  font-family: "Poppins", sans-serif;
+  color: #5a5c69;
+}
+
+/* Navbar Customization */
+.navbar {
+  background: linear-gradient(90deg, #4e73df 0%, #224abe 100%) !important;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #fff !important;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* Card Styling */
+.card,
+.shadow,
+.border.shadow {
+  border: none !important;
+  border-radius: 0.75rem !important; /* Rounded corners */
+  box-shadow: 0 0.15rem 1.75rem 0 rgba(58, 59, 69, 0.15) !important; /* Soft shadow */
+  background-color: #fff;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Hover effect on cards (optional) */
+/*
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 2rem 0 rgba(58, 59, 69, 0.2) !important;
+}
+*/
+
+/* Buttons */
+.btn {
+  border-radius: 0.35rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #4e73df;
+  border-color: #4e73df;
+}
+
+.btn-primary:hover {
+  background-color: #2e59d9;
+  border-color: #2653d4;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Tables */
+.table {
+  margin-bottom: 0;
+}
+
+.table thead th {
+  background-color: #4e73df;
+  color: white;
+  border: none;
+  padding: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(78, 115, 223, 0.05); /* Slight blue tint on hover */
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #4e73df;
+  font-weight: 600;
+}
+
+/* Utility */
+.rounded-lg {
+  border-radius: 1rem !important;
+}
+
+.bg-gradient-primary {
+  background: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+  background-size: cover;
+}
+
+.text-gray-800 {
+  color: #5a5c69 !important;
+}
